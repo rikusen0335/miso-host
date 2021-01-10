@@ -1,14 +1,6 @@
+/* purgecss start ignore */
 @tailwind base;
 
-/* Write your own custom base styles here */
-
-/* Start purging... */
 @tailwind components;
-/* Stop purging. */
-
-
-/* Start purging... */
+/* purgecss end ignore */
 @tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
