@@ -41,6 +41,7 @@
     "postcss": "8.2.3",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-import": "14.0.0",
+    "postcss-preset-env": "6.7.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "4.1.0",
