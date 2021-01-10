@@ -1,189 +1,163 @@
 import React from 'react';
-import Head from 'next/head';
+import Layout from '@/components/Layout';
+import Card from '@/components/Card';
+import { NextPage } from 'next';
+import Plan from '@/components/Plan';
+import { FadeInUp } from '@/components/FadeInUp';
 
-import Title from '@/components/Title';
+const Home: NextPage = () => (
+  <Layout>
+    <div className="flex flex-col items-center w-full">
+      <section className="container mx-auto mt-24 mb-16">
+        <h1 className="mb-16 text-5xl font-bold text-center text-gray-900">
+          ゲームサーバーをホストしよう
+        </h1>
 
-const Home: React.FC = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+        {/* 特徴説明 */}
+        <div className="grid grid-cols-4 gap-4 mb-16">
+          <Card
+            iconUrl="https://img.icons8.com/ultraviolet/80/000000/mobile-payment.png"
+            className="col-auto"
+            title="コンビニ決済対応"
+            description={`コンビニ決済で、ラクラク決済。\nもちろんクレジットカードも\n使用可能！`}
+          />
+          <Card
+            delay={50}
+            iconUrl="https://img.icons8.com/ultraviolet/80/000000/lightning-bolt.png"
+            className="col-auto"
+            title="契約から起動まで約１分"
+            description="素早く環境を試せます"
+          />
+          <Card
+            delay={100}
+            iconUrl="https://img.icons8.com/ultraviolet/80/000000/money--v1.png"
+            className="col-auto"
+            title="１時間２円〜使える"
+            description="ご利用プランに合わせた柔軟な価格設定で使えます"
+          />
+          <Card
+            delay={150}
+            iconUrl="https://img.icons8.com/ultraviolet/80/000000/ssd.png"
+            className="col-auto"
+            title="SSD搭載"
+            description={`素早い読み書き速度で、\nストレスのないホスティング`}
+          />
+        </div>
+      </section>
 
-    <main>
-      <Title />
+      {/* 画像カラム */}
+      <section className="mx-auto">
+        <div className="flex flex-col py-32 space-y-32 bg-gray-100 px-96">
+          <FadeInUp delay={100} className="grid grid-cols-5 gap-12">
+            <div className="col-span-2 my-6">
+              <h2 className="mb-2 text-3xl font-bold text-black">
+                見やすいダッシュボード
+              </h2>
+              <p className="text-lg text-gray-700">
+                見やすさを追求したダッシュボードで、直感的でわかりやすい画面をお届けします。
+              </p>
+              {/* <table className="m-4">
+                <tbody>
+                  <tr className="flex space-x-2">
+                    <td className="text-base font-bold text-gray-800">The table body</td>
+                    <td className="text-base text-gray-700">with two columns</td>
+                  </tr>
+                  <tr className="flex space-x-2">
+                    <td className="text-base font-bold text-gray-800">The table body</td>
+                    <td className="text-base text-gray-700">with two columns</td>
+                  </tr>
+                </tbody>
+              </table> */}
+            </div>
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
+            <img
+              className="col-span-3"
+              src="/images/misohost-2.png"
+              alt="ダッシュボード"
+            />
+          </FadeInUp>
 
-      <p className="description">This is not an official starter!</p>
+          <FadeInUp delay={100} className="grid grid-cols-5 gap-12">
+            <img
+              className="col-span-3"
+              src="/images/misohost-4.png"
+              alt="コンソール"
+            />
 
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            <div className="col-span-2 my-6">
+              <h2 className="mb-2 text-3xl font-bold text-black">
+                見やすいダッシュボード
+              </h2>
+              <p className="text-lg text-gray-700">
+                見やすさを追求したダッシュボードで、直感的でわかりやすい画面をお届けします。
+              </p>
+            </div>
+          </FadeInUp>
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
+          <FadeInUp delay={100} className="grid grid-cols-5 gap-12">
+            <div className="col-span-2 my-6">
+              <h2 className="mb-2 text-3xl font-bold text-black">
+                見やすいダッシュボード
+              </h2>
+              <p className="text-lg text-gray-700">
+                見やすさを追求したダッシュボードで、直感的でわかりやすい画面をお届けします。
+              </p>
+            </div>
 
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
+            <img
+              className="col-span-3"
+              src="/images/misohost-5.png"
+              alt="ファイルエクスプローラー"
+            />
+          </FadeInUp>
+        </div>
+      </section>
+
+      {/* プランリスト */}
+      <section className="container mx-auto mt-20">
+        <FadeInUp
+          delay={100}
+          className="flex flex-wrap pt-4 pb-10 m-auto mt-6 md:mt-15 lg:px-12 xl:px-16"
         >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
+          <div className="w-full px-0 lg:px-4">
+            <h2 className="px-12 text-lg font-bold text-center text-steel-500 md:text-2xl">
+              おすすめのプランリスト
+            </h2>
+            <p className="py-1 mb-10 text-sm text-center text-steel-500">
+              まずは始めてみたいという方へ、当サービスがおすすめするプランをご用意いたしました
+            </p>
 
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <a href="https://zeit.co" target="_blank" rel="noopener noreferrer">
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
-
-    <style jsx>
-      {`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}
-    </style>
-
-    <style jsx global>
-      {`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}
-    </style>
-  </div>
+            <div className="flex flex-wrap items-center justify-center py-4 pt-0">
+              <Plan
+                planName="1GBプラン"
+                hourPrice="2"
+                monthPrice="700"
+                cpu="1"
+                memory="1"
+                storage="10"
+              />
+              <Plan
+                planName="2GBプラン"
+                hourPrice="4"
+                monthPrice="1400"
+                cpu="1"
+                memory="2"
+                storage="20"
+              />
+              <Plan
+                planName="4GBプラン"
+                hourPrice="8"
+                monthPrice="2700"
+                cpu="1"
+                memory="4"
+                storage="40"
+              />
+            </div>
+          </div>
+        </FadeInUp>
+      </section>
+    </div>
+  </Layout>
 );
 
 export default Home;
