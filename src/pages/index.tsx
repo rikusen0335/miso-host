@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import Card from '@/components/Card';
-import { GetStaticProps, NextPage } from 'next';
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import Plan from '@/components/Plan';
 import { FadeInUp } from '@/components/FadeInUp';
 import { fetchEntries, QAType } from '@/api';
@@ -175,7 +175,8 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
     </div>
   </Layout>
 );
-export const getStaticProps: GetStaticProps = async () => {
+
+export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetchEntries();
   const qas = await res.map((p: { fields: any }) => p.fields);
 
