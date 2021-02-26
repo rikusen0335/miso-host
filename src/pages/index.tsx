@@ -109,7 +109,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
                 ファイルマネージャーも完備
               </h2>
               <p className="text-lg text-gray-700">
-                素早い操作体験を、あなたのもとへ。
+                ブラウザでのファイル送受信はもちろん、FTPによるファイル送受信も可能。
               </p>
             </div>
 
@@ -143,7 +143,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
                 monthPrice="700"
                 cpu="1"
                 memory="1"
-                storage="10"
+                storage="5"
               />
               <Plan
                 planName="2GBプラン"
@@ -151,7 +151,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
                 monthPrice="1400"
                 cpu="1"
                 memory="2"
-                storage="20"
+                storage="10"
               />
               <Plan
                 planName="4GBプラン"
@@ -159,7 +159,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
                 monthPrice="2700"
                 cpu="1"
                 memory="4"
-                storage="40"
+                storage="20"
               />
             </div>
           </div>

@@ -70,7 +70,7 @@ const Header: React.FC = () => (
               <p className="text-xl font-bold text-white">MisoHost</p>
             </Link>
           </div>
-          <div className="hidden sm:block sm:ml-6">
+          <div className="hidden sm:block sm:ml-auto">
             <div className="flex space-x-4">
               {/* <Link href="/">
                   <a
@@ -84,12 +84,18 @@ const Header: React.FC = () => (
                     Home
                   </a>
                 </Link> */}
-              {/* <Link href="/scripts">
-                  <a className={cx(
-                    "px-3 py-2 text-sm font-medium",
-                    router.pathname === "/scripts" ? "text-white bg-gray-900 rounded-md" : "text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                  )}>Scripts</a>
-                </Link> */}
+              <a
+                href="https://server.misohost.com/register.html"
+                className="px-3 py-2 text-sm font-medium text-white"
+              >
+                アカウント登録
+              </a>
+              <a
+                href="https://server.misohost.com/"
+                className="px-3 py-2 text-sm font-medium text-white"
+              >
+                ログイン
+              </a>
             </div>
           </div>
         </div>
