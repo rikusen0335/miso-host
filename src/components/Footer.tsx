@@ -6,7 +6,7 @@ import cx from 'clsx';
 
 const Footer: React.FC = () => {
   const LinkedText = ({ children, href }) => (
-    <a className="hover:underline" href={href}>
+    <a className="text-sm hover:underline" href={href}>
       {children}
     </a>
   );
