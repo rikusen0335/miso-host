@@ -80,7 +80,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
             </div>
 
             <ZoomableImage
-              className="col-span-5 lg:col-span-3"
+              className="col-span-5 cursor-pointer lg:col-span-3"
               src="/images/misohost-2.png"
               alt="ダッシュボード"
             />
@@ -88,7 +88,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
 
           <FadeInUp delay={100} className="grid grid-cols-5 gap-12">
             <ZoomableImage
-              className="order-2 col-span-5 lg:order-1 lg:col-span-3"
+              className="order-2 col-span-5 cursor-pointer lg:order-1 lg:col-span-3"
               src="/images/misohost-4.png"
               alt="コンソール"
             />
@@ -114,7 +114,7 @@ const HomePage: NextPage<HomePageProps> = ({ qas }) => (
             </div>
 
             <ZoomableImage
-              className="col-span-5 lg:col-span-3"
+              className="col-span-5 cursor-pointer lg:col-span-3"
               src="/images/misohost-5.png"
               alt="ファイルマネージャー"
             />
