@@ -1,0 +1,8 @@
+.markdown {
+  @apply tracking-wide;
+}
+
+.markdown a {
+  @apply text-blue-600;
+  @apply hover:underline;
+}
