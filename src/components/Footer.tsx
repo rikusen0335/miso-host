@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         </LinkedText>
       </p>
       <p className="font-bold text-center text-white mx-60">
-        &copy; 2021 MeguHost
+        &copy; 2021 MisoService
       </p>
     </div>
   );
